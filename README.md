@@ -1,28 +1,54 @@
-# T3 Code
+<div align="center">
 
-T3 Code is a minimal web GUI for coding agents (currently Codex and Claude, more coming soon).
+# t1code
 
-## How to use
+[![License](https://img.shields.io/badge/license-MIT-111111?style=flat-square)](./LICENSE)
+[![npm](https://img.shields.io/npm/v/t1code?color=111111&label=npm&style=flat-square)](https://www.npmjs.com/package/t1code)
+[![GitHub](https://img.shields.io/badge/github-maria--rcks%2Ft1code-111111?style=flat-square&logo=github)](https://github.com/maria-rcks/t1code)
 
-> [!WARNING]
-> You need to have [Codex CLI](https://github.com/openai/codex) installed and authorized for T3 Code to work.
+<img src="./assets/repo/t1code-preview.webp" alt="t1code terminal UI screenshot" width="1000" />
+
+_T3Code, but in your terminal._
+
+</div>
+
+## What it is
+
+`t1code` is a terminal-first fork of T3 Code.
+
+## Install
 
 ```bash
-npx t3
+npx t1code
 ```
 
-You can also just install the desktop app. It's cooler.
+## What you need
 
-Install the [desktop app from the Releases page](https://github.com/pingdotgg/t3code/releases)
+- the required CLI tooling installed
+- provider auth already set up
+- macOS-first for now
 
-## Some notes
+## Development
 
-We are very very early in this project. Expect bugs.
+```bash
+bun install
+bun run dev:tui
+```
 
-We are not accepting contributions yet.
+For the required checks:
 
-## If you REALLY want to contribute still.... read this first
+```bash
+bun run fmt
+bun run lint
+bun run typecheck
+```
 
-Read [CONTRIBUTING.md](./CONTRIBUTING.md) before opening an issue or PR.
+## Notes
 
-Need support? Join the [Discord](https://discord.gg/jn4EGJjrvv).
+- This is still early.
+- This project is based on [T3 Code](https://github.com/pingdotgg/t3code).
+
+## Credits
+
+- [@t3dotgg](https://github.com/t3dotgg) and the T3 Code contributors
+- [@juliusmarminge](https://github.com/juliusmarminge)
