@@ -1746,16 +1746,6 @@ function Badge(props: { label: string; tone?: "default" | "accent" | "warn" }) {
   );
 }
 
-function WindowDots() {
-  return (
-    <box style={{ flexDirection: "row", alignItems: "center", marginRight: 2 }}>
-      <text content="●" style={{ fg: PALETTE.macRed, marginRight: 1 }} />
-      <text content="●" style={{ fg: PALETTE.macYellow, marginRight: 1 }} />
-      <text content="●" style={{ fg: PALETTE.macGreen, marginRight: 2 }} />
-    </box>
-  );
-}
-
 function renderAnimatedSendDots(
   tick: number,
 ): Array<{ key: string; character: string; color: string }> {
@@ -6726,7 +6716,6 @@ export function App({
             }}
           >
             <box style={{ flexDirection: "row", alignItems: "center" }}>
-              {responsiveLayout.showWindowDots ? <WindowDots /> : null}
               <text
                 content={responsiveLayout.sidebarTitle}
                 style={{

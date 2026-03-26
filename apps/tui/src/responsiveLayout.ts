@@ -2,7 +2,6 @@ export const TUI_SIDEBAR_WIDTH = 34;
 
 const SIDEBAR_TOGGLE_MAX_MAIN_COLUMNS = 56;
 const SIDEBAR_FORCE_COLLAPSE_MAX_MAIN_COLUMNS = 44;
-const COMPACT_HEADER_MAX_COLUMNS = 132;
 const COMPOSER_MODE_LABEL_MIN_MAIN_COLUMNS = 44;
 const COMPOSER_MODEL_LABEL_MIN_MAIN_COLUMNS = 62;
 const COMPOSER_TRAITS_LABEL_MIN_MAIN_COLUMNS = 82;
@@ -13,7 +12,6 @@ export type TuiResponsiveLayout = Readonly<{
   sidebarCollapsed: boolean;
   sidebarWidth: number;
   showSidebar: boolean;
-  showWindowDots: boolean;
   showSidebarAlphaBadge: boolean;
   sidebarTitle: string;
   showHeaderProjectBadge: boolean;
@@ -47,7 +45,6 @@ export function resolveTuiResponsiveLayout(input: {
     sidebarCollapsed,
     sidebarWidth: sidebarCollapsed ? 0 : TUI_SIDEBAR_WIDTH,
     showSidebar: !sidebarCollapsed,
-    showWindowDots: input.viewportColumns >= COMPACT_HEADER_MAX_COLUMNS,
     showSidebarAlphaBadge: !sidebarCollapsed,
     sidebarTitle: !sidebarCollapsed ? "T1 Code" : "T1",
     showHeaderProjectBadge: input.viewportColumns >= 144,
